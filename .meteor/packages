@@ -10,3 +10,7 @@ insecure
 fourseven:scss
 mrt:moment
 mrt:twilio-meteor
+
+
+npm-container
+meteorhacks:npm

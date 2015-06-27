@@ -9,6 +9,16 @@ Template.pressureForm.helpers({
 
 Template.pressureForm.events({
   'submit .new-pressure': function (event) {
+    if (event.target.snapchat.value) {
+      Meteor.call('getSnapchat', {
+        snapchat: event.target.snapchat.value,
+      }, function (error, result) {
+        if (error) {
+          console.log('we fucked up')
+          console.error(error);
+        }
+      });
+    }
     if (event.target.mobile.value) {
       Meteor.call('textSpam', {
         number: event.target.mobile.value,

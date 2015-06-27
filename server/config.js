@@ -8,5 +8,8 @@ Config = {
   snapchat: {
     username: process.env.SNAPCHAT_USERNAME,
     password: process.env.SNAPCHAT_PASSWORD
+  },
+  mailchimp: {
+    key: process.env.MAILCHIMP_KEY,
   }
 };
