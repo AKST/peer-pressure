@@ -2,6 +2,8 @@ Meteor.startup(function () {
   Twilio = Twilio(Config.ACCOUNT_SID, Config.AUTH_TOKEN);
   Snapchat = Snapchat(Config.SNAPCHAT_USERNAME,Config.SNAPCHAT_PASSWORD);
 
+  MailChimpOptions.apiKey = "54cbfca258a3cb8ae931aa7d7d665386-us11";
+  MailChimpOptions.listId = "e987b39bbf";
 })
 
 function onTwilioResponse (error, result) {
@@ -25,6 +27,16 @@ Meteor.methods({
     }
     console.log(payload.twitter, payload.mobile, payload.email);
   }
+
+
+// mailchimp
+
+try {
+    //
+    var MCApi = new MailChimp( MailChimpOptions.apiKey );
+} catch ( error ) {
+    console.log( error.message );
+}
 
 
 // Snapchat
