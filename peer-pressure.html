@@ -3,12 +3,17 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Peer Pressure</h1>
 
   {{> hello}}
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+    <p>Peer Pressure is a web app that allows you to "contact" people who pike from events.</p>
+    <form>
+        <label for="phonenumber">Phone number</label>
+        <input name="phonenumber" placeholder="Enter your friend's phone number" />
+        <br />
+        <input type="submit"/>
+    </form>
 </template>
