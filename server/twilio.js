@@ -1,7 +1,10 @@
 PP.Twilio = {
 
   client: function () {
-    return Twilio(Config.ACCOUNT_SID, Config.AUTH_TOKEN);
+    return new Twilio(
+      Config.twilio.ACCOUNT_SID,
+      Config.twilio.AUTH_TOKEN
+    );
   },
 
   sendSms: function (kwargs) {

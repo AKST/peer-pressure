@@ -5,7 +5,6 @@
 <body>
   <div class="container">
     <h1>Peer Pressure</h1>
-
     {{> pressureForm}}
   </div>
 </body>
@@ -13,23 +12,21 @@
 <template name="pressureForm">
   <form class="new-pressure">
     <section class="new-pressure-section">
-      <input name="twitter" placeholder="twitter handle"/>
+      <input class="new-pressure-user" name="twitter" placeholder="twitter handle"/>
+      <input class="new-pressure-message" name="twitterMessage" placeholder="message"/>
     </section>
 
     <section class="new-pressure-section">
-      <input name="snapchat" placeholder="snapchat handle"/>
+      <input class="new-pressure-user" name="mobile" placeholder="mobile number"/>
+      <input class="new-pressure-message" name="mobileMessage" placeholder="message"/>
     </section>
 
     <section class="new-pressure-section">
-      <input name="mobile" placeholder="mobile number"/>
-    </section>
-
-    <section class="new-pressure-section">
-      <input name="email" placeholder="email"/>
+      <input class="new-pressure-user" name="email" placeholder="email"/>
     </section>
 
     <section class="new-pressure-section submits">
-      <input type="submit"/>
+      <input class="new-pressure-user" type="submit"/>
     </section>
   </form>
 </template>

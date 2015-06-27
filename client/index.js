@@ -9,23 +9,24 @@ Template.pressureForm.helpers({
 
 Template.pressureForm.events({
   'submit .new-pressure': function (event) {
-    if (event.target.snapchat.value) {
-      Meteor.call('getSnapchat', {
-        snapchat: event.target.snapchat.value,
+    if (event.target.mobile.value) {
+      Meteor.call('textSpam', {
+        number: event.target.mobile.value,
+        message: event.target.mobileMessage.value,
       }, function (error, result) {
         if (error) {
-          console.log('we fucked up')
+          console.log('we fucked up mobile')
           console.error(error);
         }
       });
     }
-    if (event.target.mobile.value) {
-      Meteor.call('textSpam', {
-        number: event.target.mobile.value,
-        message: 'ayyyyyyyyyyyyyyy',
+    if (event.target.twitter.value) {
+      Meteor.call("tweetBabyTweet", {
+        handle: event.target.twitter.value,
+        message: event.target.twitterMessage.value,
       }, function (error, result) {
         if (error) {
-          console.log('we fucked up')
+          console.log('we fucked up twitter')
           console.error(error);
         }
       });

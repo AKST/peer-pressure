@@ -5,6 +5,12 @@ Config = {
     account_sid: process.env.TWILIO_ACCOUNT_SID,
     test_number: process.env.TEST_NUMBER
   },
+  twitter: {
+    consumerKey: process.env.TWITTER_CON_KEY,
+    consumerSecret: process.env.TWITTER_CON_SECRET,
+    accessToken: process.env.TWITTER_ACC_TOK,
+    accessSecretToken: process.env.TWITTER_ACC_SEC,
+  },
   snapchat: {
     username: process.env.SNAPCHAT_USERNAME,
     password: process.env.SNAPCHAT_PASSWORD

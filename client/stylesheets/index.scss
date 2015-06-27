@@ -16,4 +16,15 @@
   .new-pressure-section.submits {
     margin-top: 1em;
   }
+  .new-pressure-user {
+    margin-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: calc(20% - 6px);
+  }
+  .new-pressure-message {
+    padding-left: 2px;
+    padding-right: 2px;
+    width: calc(80% - 16px);
+  }
 }
