@@ -6,14 +6,14 @@
 }
 
 .new-pressure {
-  input {
+  .new-pressure-section {
     display: block;
 
-    &+ input {
+    &+ .new-pressure-section {
       margin-top: 0.5em;
     }
   }
-  input[type=submit] {
+  .new-pressure-section.submits {
     margin-top: 1em;
   }
 }
