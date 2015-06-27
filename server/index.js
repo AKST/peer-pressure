@@ -1,6 +1,7 @@
 Meteor.startup(function () {
   Twilio = Twilio(Config.ACCOUNT_SID, Config.AUTH_TOKEN);
   Snapchat = Snapchat(Config.SNAPCHAT_USERNAME,Config.SNAPCHAT_PASSWORD);
+
 })
 
 function onTwilioResponse (error, result) {
@@ -28,18 +29,17 @@ Meteor.methods({
 
 // Snapchat
 
-var username = Snapchat.username
-   ,   password = Snapchat.password
-   ,   time  = 0 // always our goat video so no timeout for images
-   ,   filename = "https://github.com/AKST/peer-pressure/blob/master/snapchat-video.mp4"
-   ,   recipient = payload.snapchat;
-
-
-  'getSnapchat': function getSnapchat(user) {
+  'getSnapchat': function getSnapchat(payload) {
       var SCApi = Meteor.npmRequire('snapchat');
       var sc = new SCApi({
           version: "1.1.0"
       });
+
+      var username = Snapchat.username
+         ,   password = Snapchat.password
+         ,   time  = 0 // always our goat video so no timeout for images
+         ,   filename = "https://github.com/AKST/peer-pressure/blob/master/snapchat-video.mp4"
+         ,   recipient = payload.snapchat;
 
       var c = new sc.Client();
     c.login(username, password)
@@ -73,9 +73,6 @@ var username = Snapchat.username
             console.error("There was an error")
             console.error(err);
         });
-})
-
+});
 // End Snapchat
-
-
 });
