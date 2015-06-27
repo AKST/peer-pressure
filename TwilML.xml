@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <Response>
+    <Say voice="alice">You should come to the event Tim.  
+    </Say><Pause length="1"/>
+    <Say voice="alice">Let us know if we can help you in any way during your development.</Say>
+</Response>
