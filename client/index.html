@@ -3,26 +3,26 @@
 </head>
 
 <body>
+</body>
+
+<template name="home">
   <div class="container">
     <h1>Peer Pressure</h1>
     {{> pressureForm}}
   </div>
-</body>
+</template>
 
 <template name="pressureForm">
   <form class="new-pressure">
     <section class="new-pressure-section">
       <input class="new-pressure-user" name="twitter" placeholder="twitter handle"/>
-      <input class="new-pressure-message" name="twitterMessage" placeholder="message"/>
+      <input class="new-pressure-param" name="twitterMessage" placeholder="message"/>
     </section>
 
     <section class="new-pressure-section">
       <input class="new-pressure-user" name="mobile" placeholder="mobile number"/>
-      <input class="new-pressure-message" name="mobileMessage" placeholder="message"/>
-    </section>
-
-    <section class="new-pressure-section">
-      <input class="new-pressure-user" name="email" placeholder="email"/>
+      <input class="new-pressure-param" name="mobileMessage" placeholder="text message"/>
+      <input class="new-pressure-param" name="mobileCall" placeholder="voice message"/>
     </section>
 
     <section class="new-pressure-section submits">

@@ -1,3 +1,4 @@
+
 Config = {
   twilio: {
     number: process.env.TWILIO_NUMBER,
@@ -17,5 +18,6 @@ Config = {
   },
   mailchimp: {
     key: process.env.MAILCHIMP_KEY,
-  }
+  },
+  url: process.env.FULL_URL,
 };

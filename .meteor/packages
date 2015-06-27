@@ -15,3 +15,4 @@ mrt:twilio-meteor
 npm-container
 meteorhacks:npm
 mrt:twit
+iron:router

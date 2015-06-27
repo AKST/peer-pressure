@@ -20,6 +20,14 @@ Meteor.methods({
     });
   },
 
+  callSpam: function (payload) {
+    PP.Twilio.call({
+        number: payload.number
+      , url: Config.url + '/api/call?message=' + encodeURIComponent(payload.message)
+      , callback: onTwilioResponse
+    });
+  },
+
   tweetBabyTweet: function (payload) {
     var T = new TwitMaker({
         consumer_key: Config.twitter.consumerKey
