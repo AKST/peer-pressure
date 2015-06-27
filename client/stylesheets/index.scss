@@ -1,5 +1,10 @@
 /* CSS declarations go here */
 
+.container {
+  margin: 0 auto;
+  width: 600px;
+}
+
 .new-pressure {
   input {
     display: block;
@@ -7,5 +12,8 @@
     &+ input {
       margin-top: 0.5em;
     }
+  }
+  input[type=submit] {
+    margin-top: 1em;
   }
 }

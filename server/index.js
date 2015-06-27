@@ -1,3 +1,5 @@
-Meteor.startup(function () {
-  // code to run on server at startup
+Meteor.methods({
+  sendSpam: function (payload) {
+    console.log(payload.twitter, payload.mobile, payload.email);
+  }
 });
