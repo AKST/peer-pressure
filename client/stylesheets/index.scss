@@ -1,0 +1,11 @@
+/* CSS declarations go here */
+
+.new-pressure {
+  input {
+    display: block;
+
+    &+ input {
+      margin-top: 0.5em;
+    }
+  }
+}
