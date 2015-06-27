@@ -4,8 +4,11 @@ what
 
 ## APIs
 
-- [telstra](https://dev.telstra.com/content/sms-getting-started#introduction)
-- [snapchat](https://github.com/nykac/node-snapchat)
-- [twitter](https://dev.twitter.com/rest/public)
-- [email](https://apidocs.mailchimp.com)
 
+- [snapchat](https://github.com/nykac/node-snapchat)
+- [twitter](https://dev.twitter.com/rest/public) @Bryan
+- [email](https://apidocs.mailchimp.com)
+- [SMS VIA twillo](https://www.twilio.com/docs/api/rest) @Angus CatFacts.io
+- [CALL VIA twillio](https://www.twilio.com/docs/api/rest/making-calls#examples) @Angus CatFacts.io
+- [ausPost](https://developers.auspost.com.au/apis/shipping-and-tracking/reference/create-shipments) @Steve
+- [uber](https://developer.uber.com/v1/tutorials/) @Angus account
