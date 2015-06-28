@@ -1,32 +1,142 @@
 /* CSS declarations go here */
 
+
+
 .container {
   margin: 0 auto;
   max-width: 600px;
+  font-family: 'Open Sans', sans-serif;
 }
+
+textarea, input { outline: none; }
+
+.page-title {
+
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  padding: 1em 0;
+}
+
+$bg-color: #383732;
+$padding: 8px;
+$spacing: 4px;
+$grey: #555;
+$border-radius: 3px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: darken($bg-color, 25%);
+  background-image: url('/pattern.png');
+  background-size: 100vw 100vh;
+  background-position: center top;
+}
+
 
 .new-pressure {
   .new-pressure-section {
     display: block;
 
     &+ .new-pressure-section {
-      margin-top: .25em;
+      margin-top: $spacing;
     }
   }
+
+  $input-height: 30px;
+  $icon-width: $input-height * 1.25;
+
   .new-pressure-section.submits {
     margin-top: 1em;
   }
+
+  .new-pressure-icon {
+    width: $icon-width;
+    height: $input-height;
+    text-align: center;
+  }
+
+  .new-pressure-user, .new-pressure-param {
+    font-size: 12px;
+    padding-left: $padding;
+    padding-right: 0;
+    border: 1px $grey solid;
+    height: $input-height;
+    border-radius: $border-radius;
+  }
   .new-pressure-user {
-    padding-left: 2px;
-    padding-right: 2px;
-    width: calc(20% - 6px);
+    margin-right: $spacing;
+    margin-left: 0;
+    width: calc(20% - #{$padding + $spacing});
   }
   .new-pressure-param {
-    padding-right: 2px;
-    width: calc(80% - 13px);
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(80% - (21px + #{$icon-width}));
     &+ .new-pressure-param {
-      margin-top: .25em;
-      margin-left: calc(20% + 6px);
+      margin-left: calc(20% + 10px + #{$icon-width});
+      margin-top: $spacing;
     }
   }
 }
+
+.new-pressure-section.submits input {
+  display: none;
+}
+
+.submit-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+
+  &:hover {
+    cursor: pointer;
+    .shape {
+      -webkit-animation: 0.5s draw linear forwards;
+      animation: 0.5s draw linear forwards;
+    }
+  }
+  &:active {
+    cursor: pointer;
+  }
+
+  height: 60px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #46326D;
+}
+
+.text {
+  color: black;
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+  text-align: center;
+  font-family: 'Roboto Condensed';
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+

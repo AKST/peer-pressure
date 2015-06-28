@@ -2,8 +2,8 @@ PP.Twilio = {
 
   client: function () {
     return new Twilio(
-      Config.twilio.ACCOUNT_SID,
-      Config.twilio.AUTH_TOKEN
+      Config.twilio.account_sid,
+      Config.twilio.auth_token
     );
   },
 

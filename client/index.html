@@ -1,5 +1,9 @@
 <head>
   <title>peer-pressure</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'/>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
 </head>
 
 <body>
@@ -7,7 +11,7 @@
 
 <template name="home">
   <div class="container">
-    <h1>Peer Pressure</h1>
+    <h1 class="page-title">Peer Pressure</h1>
     {{> pressureForm}}
   </div>
 </template>
@@ -15,18 +19,25 @@
 <template name="pressureForm">
   <form class="new-pressure">
     <section class="new-pressure-section">
+      <i class="fa fa-twitter new-pressure-icon"></i>
       <input class="new-pressure-user" name="twitter" placeholder="twitter handle"/>
       <input class="new-pressure-param" name="twitterMessage" placeholder="message"/>
     </section>
 
     <section class="new-pressure-section">
-      <input class="new-pressure-user" name="mobile" placeholder="mobile number"/>
-      <input class="new-pressure-param" name="mobileMessage" placeholder="text message"/>
-      <input class="new-pressure-param" name="mobileCall" placeholder="voice message"/>
+      <i class="fa fa-phone new-pressure-icon"></i>
+      <input class="new-pressure-user" name="mobile" placeholder="mobile #"/>
+      <input class="new-pressure-param" name="mobileMessage" placeholder="(optional text message)"/>
     </section>
 
     <section class="new-pressure-section submits">
-      <input class="new-pressure-user" type="submit"/>
+      <input class="new-pressure-user" type="submit" value="Apply Pressure">
     </section>
+    <div class="submit-button">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+       <div class="text">APPLY PRESSURE</div>
+    </div>
   </form>
 </template>

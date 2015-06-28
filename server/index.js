@@ -23,7 +23,7 @@ Meteor.methods({
   callSpam: function (payload) {
     PP.Twilio.call({
         number: payload.number
-      , url: Config.url + '/api/call?message=' + encodeURIComponent(payload.message)
+      , url: Config.url + '/api/call'
       , callback: onTwilioResponse
     });
   },
