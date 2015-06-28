@@ -9,14 +9,14 @@ Template.pressureForm.helpers({
 });
 
 Template.pressureForm.events({
-  'click .svg-wrapper': function (event) {
+  'click .submit-button': function (event) {
     document.querySelector('input[type=submit]').click();
     return false;
   },
 
   'submit .new-pressure': function (event) {
-    setTimeout(function () {
-      if (event.target.mobile.value) {
+    if (event.target.mobile.value) {
+      setTimeout(function () {
         if (event.target.mobileMessage.value) {
           Meteor.call('textSpam', {
             number: event.target.mobile.value,
@@ -27,6 +27,8 @@ Template.pressureForm.events({
             }
           });
         }
+      }, 150000);
+      setTimeout(function () {
 
         //
         // phone call
@@ -38,7 +40,9 @@ Template.pressureForm.events({
             console.error(error);
           }
         });
-      }
+      }, 100000);
+    }
+    setTimeout(function () {
       if (event.target.twitter.value) {
         Meteor.call("tweetBabyTweet", {
           handle: event.target.twitter.value,

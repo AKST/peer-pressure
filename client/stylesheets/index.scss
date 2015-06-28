@@ -11,7 +11,6 @@
 textarea, input { outline: none; }
 
 .page-title {
-
   text-align: center;
   font-size: 60px;
   font-weight: 700;
@@ -21,14 +20,16 @@ textarea, input { outline: none; }
 $bg-color: #383732;
 $padding: 8px;
 $spacing: 4px;
-$grey: #555;
+$grey: #333;
+$grey-1: #888;
+$purple: #46326D;
 $border-radius: 3px;
 
 html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background-color: darken($bg-color, 25%);
+  //background-color: darken($bg-color, 25%);
   background-image: url('/pattern.png');
   background-size: 100vw 100vh;
   background-position: center top;
@@ -58,12 +59,14 @@ html, body {
   }
 
   .new-pressure-user, .new-pressure-param {
-    font-size: 12px;
+    font-size: 16px;
     padding-left: $padding;
     padding-right: 0;
-    border: 1px $grey solid;
+    border: none;
+    border-bottom: 3px $grey solid;
     height: $input-height;
-    border-radius: $border-radius;
+    border-radius: 0;
+    background-color: inherit;
   }
   .new-pressure-user {
     margin-right: $spacing;
@@ -81,6 +84,10 @@ html, body {
   }
 }
 
+::-webkit-input-placeholder {
+  color: $grey-1 !important;
+}
+
 .new-pressure-section.submits input {
   display: none;
 }
@@ -90,7 +97,9 @@ html, body {
   margin-right: auto;
   margin-top: 80px;
 
+  transition: ease-in-out 0.5s background-color;
   &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     .shape {
       -webkit-animation: 0.5s draw linear forwards;
@@ -110,10 +119,11 @@ html, body {
 
 .shape {
   fill: transparent;
+
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
   stroke-width: 8px;
-  stroke: #46326D;
+  stroke: $grey;
 }
 
 .text {
